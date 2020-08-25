@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screen.DataSaldoFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCard"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_baseline_attach_money_24" />
+
+            <TextView
+                android:id="@+id/balanceView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="56dp" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/materialCard"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/transferButton"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:icon="@drawable/ic_baseline_account_balance_24"
+            app:iconGravity="textStart"
+            app:iconSize="40dp"
+            app:cardElevation="10dp"
+            app:cornerRadius="15dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/historyButton"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:icon="@drawable/ic_baseline_history_24"
+            app:iconGravity="textStart"
+            app:iconSize="40dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:cardElevation="10dp"
+            app:cornerRadius="15dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/callButton"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:iconSize="40dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:icon="@drawable/ic_baseline_call_24"
+            app:iconGravity="textStart"
+            app:cardElevation="10dp"
+            app:cornerRadius="15dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

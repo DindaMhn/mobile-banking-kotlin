@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.livecode_kotlin.screen.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dataSaldoFragment"
+            app:destination="@id/dataSaldoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataSaldoFragment"
+        android:name="com.example.livecode_kotlin.screen.DataSaldoFragment"
+        android:label="fragment_data_saldo"
+        tools:layout="@layout/fragment_data_saldo" >
+        <action
+            android:id="@+id/action_dataSaldoFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_dataSaldoFragment_to_transactionActivity"
+            app:destination="@id/transactionActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.livecode_kotlin.screen.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <activity
+        android:id="@+id/transactionActivity"
+        android:name="com.example.livecode_kotlin.TransactionActivity"
+        android:label="activity_transaction"
+        tools:layout="@layout/activity_transaction" />
+</navigation>
